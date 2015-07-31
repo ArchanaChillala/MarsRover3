@@ -43,4 +43,23 @@ public class Move {
         }
         return direction;
     }
+
+
+    public String oneStepAhead(int XCoordinate, int YCoordinate, char direction) {
+        switch (direction) {
+            case 'E':
+                XCoordinate++;
+                break;
+            case 'S':
+                YCoordinate--;
+                break;
+            case 'W':
+                XCoordinate--;
+                break;
+            case 'N':
+                YCoordinate++;
+                break;
+        }
+        return XCoordinate + " " + YCoordinate + " " + direction;
+    }
 }

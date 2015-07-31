@@ -53,5 +53,24 @@ public class MoveTest {
         assertEquals('W', move.rightRotation('S'));
     }
 
+    @Test
+    public void shouldMoveAStepRightWhenFacingEast() {
+        assertEquals("2 3 E", move.oneStepAhead(1, 3, 'E'));
+    }
+
+    @Test
+    public void shouldMoveAStepDownWhenFacingSouth() {
+        assertEquals("1 2 S", move.oneStepAhead(1, 3, 'S'));
+    }
+
+    @Test
+    public void shouldMoveAStepLeftWhenFacingWest() {
+        assertEquals("1 3 W", move.oneStepAhead(2, 3, 'W'));
+    }
+
+    @Test
+    public void shouldMoveAStepUpWhenFacingNorth() {
+        assertEquals("2 4 N", move.oneStepAhead(2, 3, 'N'));
+    }
 
 }
