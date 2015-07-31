@@ -15,7 +15,7 @@
     <target name="run" depends="compile">
         <junit haltonfailure="true" printsummary="true" showoutput="yes">
             <test name="com.mars.MoveTest"/>
-            <test name="com.mars.PlateauTest"/>
+            <test name="com.mars.ViewTest"/>
             <classpath>
                 <pathelement location="out"/>
                 <path refid="classpath"/>
