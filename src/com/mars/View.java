@@ -2,6 +2,7 @@ package com.mars;
 
 import java.util.Scanner;
 
+
 public class View {
     private int topRightX;
     private int topRightY;
