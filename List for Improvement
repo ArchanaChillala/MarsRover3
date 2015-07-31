@@ -1,0 +1,6 @@
+Justification for Move Class (State & Behaviour)
+DRY principle (violated)
+Model - View interaction
+Used getters from View Class in Rover Class
+Control flow among classes - to be improved.
+
