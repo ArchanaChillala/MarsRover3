@@ -1,6 +1,8 @@
 package com.mars;
 
 
+// Entry Point to Mars Rover Application
+
 public class Entry {
     public static void main(String[] args) {
         View view = new View();
@@ -13,14 +15,14 @@ public class Entry {
         rover1.getLocation();
         rover1.getDirectionsToExplore();
         rover1.navigate();
-        view.printMessage(" Final Location of Rover : ");
-        rover1.showFinalLocation();
+        view.printMessage("\nFinal Location of Rover : ");
+        view.printMessage(rover1.showFinalLocation());
 
         view.printMessage("\nRover 2 :");
         rover2.getLocation();
         rover2.getDirectionsToExplore();
         rover2.navigate();
-        view.printMessage(" Final Location of Rover : ");
-        rover2.showFinalLocation();
+        view.printMessage("\nFinal Location of Rover : ");
+        view.printMessage(rover2.showFinalLocation());
     }
 }

@@ -3,6 +3,8 @@ package com.mars;
 import java.util.Scanner;
 
 
+// Rover : To make the Rover explore the plateau based on the given location and directions
+
 public class Rover {
     int x, y;
     char direction;
@@ -13,10 +15,10 @@ public class Rover {
         Scanner scan = new Scanner(System.in);
         System.out.print("\nEnter the X Coordinate of Rover : ");
         x = scan.nextInt();
-        System.out.print("\nEnter the Y Coordinate of Rover : ");
+        System.out.print("Enter the Y Coordinate of Rover : ");
         Scanner in = new Scanner(System.in);
         y = in.nextInt();
-        System.out.print("\n Enter the Direction of Rover : ");
+        System.out.print("Enter the Direction of Rover : ");
         direction = scan.next().charAt(0);
     }
 
@@ -28,21 +30,29 @@ public class Rover {
 
     public void navigate() {
         Move move = new Move();
+        View view = new View();
         for (int i = 0; i < directionsToExplore.length(); i++) {
-            switch (directionsToExplore.charAt(i)) {
-                case 'L':
-                    direction = move.leftRotation(direction);
-                    break;
-                case 'R':
-                    direction = move.rightRotation(direction);
-                    break;
-                case 'M':
-                    location = move.oneStepAhead(x, y, direction);
-                    break;
-                default:
-                    System.out.println("\nInvalid directions");
-                    break;
-            }
+            if (x >= view.getTopRightXCoordinateOfPlateau()
+                    && y >= view.getTopRightYCoordinateOfPlateau()) {
+                switch (directionsToExplore.charAt(i)) {
+                    case 'L':
+                        direction = move.leftRotation(direction);
+                        break;
+                    case 'R':
+                        direction = move.rightRotation(direction);
+                        break;
+                    case 'M':
+                        location = move.oneStepAhead(x, y, direction);
+                        x = Integer.parseInt(String.valueOf(location.charAt(0)));
+                        y = Integer.parseInt(String.valueOf(location.charAt(2)));
+                        direction = location.charAt(4);
+                        break;
+                    default:
+                        System.out.println("\nInvalid directions");
+                        break;
+                }
+            } else
+                continue;
         }
     }
 

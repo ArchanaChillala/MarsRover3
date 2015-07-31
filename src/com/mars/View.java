@@ -3,6 +3,8 @@ package com.mars;
 import java.util.Scanner;
 
 
+// An interface to interact and get the plateau boundaries and show Messages
+
 public class View {
     private int topRightX;
     private int topRightY;
@@ -29,12 +31,12 @@ public class View {
         System.out.print("\nEnter the top X Coordinate of plateau : ");
         scan = new Scanner(System.in);
         topRightX = scan.nextInt();
-        System.out.print("\nEnter the top Y Coordinate of plateau : ");
+        System.out.print("Enter the top Y Coordinate of plateau : ");
         scan = new Scanner(System.in);
         topRightY = scan.nextInt();
     }
 
     public void printMessage(String Message) {
-        System.out.print(Message);
+        System.out.println(Message);
     }
 }

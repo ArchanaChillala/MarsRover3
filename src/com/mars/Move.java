@@ -1,8 +1,6 @@
 package com.mars;
 
 public class Move {
-    private View plateau;
-
 
     public char leftRotation(char direction) {
         switch (direction) {
