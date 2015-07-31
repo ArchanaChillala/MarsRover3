@@ -38,5 +38,20 @@ public class MoveTest {
         assertEquals('N', move.rightRotation('W'));
     }
 
+    @Test
+    public void RightRotationIsEastWhenFacingNorth() {
+        assertEquals('E', move.rightRotation('N'));
+    }
+
+    @Test
+    public void RightRotationIsSouthWhenFacingEast() {
+        assertEquals('S', move.rightRotation('E'));
+    }
+
+    @Test
+    public void RightRotationIsWestWhenFacingSouth() {
+        assertEquals('W', move.rightRotation('S'));
+    }
+
 
 }

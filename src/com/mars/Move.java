@@ -27,6 +27,20 @@ public class Move {
     }
 
     public char rightRotation(char direction) {
-        return 'N';
+        switch (direction) {
+            case 'W':
+                direction = 'N';
+                break;
+            case 'N':
+                direction = 'E';
+                break;
+            case 'E':
+                direction = 'S';
+                break;
+            case 'S':
+                direction = 'W';
+                break;
+        }
+        return direction;
     }
 }
